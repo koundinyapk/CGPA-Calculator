@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA</title>
+</head>
+<body>
+    <form action="cgpa_calc" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        Enter the current semester of the students: <input type="number" name="semester" id="semester"> <br>
+        Upload the excel sheet with SGPAs of students: <input type="file" name="sgpa_file" id="sgpa_file"> <br>
+        Upload the excel header file of students with SGPAs of previous semesters: <input type="file" name="cgpa_header" id="cgpa_header"> <br>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
